@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nearby Hospitals</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+  <style>
+    #map { height: 500px; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script>
+    const userLocation = <%= JSON.stringify(userLocation) %>;
+    const nearbyHospitals = <%= JSON.stringify(nearbyHospitals) %>;
+
+    const map = L.map('map').setView([userLocation.latitude, userLocation.longitude], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    const userMarker = L.marker([userLocation.latitude, userLocation.longitude]).addTo(map);
+    userMarker.bindPopup('Your Location');
+
+    nearbyHospitals.forEach(hospital => {
+      const marker = L.marker([hospital.latitude, hospital.longitude]).addTo(map);
+      marker.bindPopup(`<b>${hospital.name}</b><br>${hospital.address}`);
+    });
+  </script>
+</body>
+</html>

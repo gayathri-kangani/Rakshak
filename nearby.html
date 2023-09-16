@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Hospitals</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAo539EAOBIdVWSBcj1KB1ivMQcKqpt6T0&libraries=places"></script>
+</head>
+<script>
+    var map;
+    var service;
+    var infowindow;
+
+    function initialize() {
+        var pyrmont = new google.maps.LatLng(-33.8665433, 151.1956316);
+
+        map = new google.maps.Map(document.getElementById('map'),{
+            center:pyrmont,
+            zoom:15
+        })
+    }
+
+    google.maps.event.addDomListerner(window,'load',initialize)
+</script>
+<body>
+    <input id="searchTextField" type="text" size="50">
+    <div id="map" style="height: 500px;"></div>
+</body>
+</html>
