@@ -1,3 +1,4 @@
+#Rakshak - Emergency Supporting Application
 This application to is advancement to already established applications such as DISHA etc.  
 - Rakshak is a SaaS application which provides saftey to every citizen of the country in terms of transferring current situational data to required people in emergency/abnormal conditions (Such Abductions, Intimidations, accidents etc).  
 - More Formally User should first register into application by giving appropriate details such as emergency contact details, Contact Numbers, Email Addresses etc.  
