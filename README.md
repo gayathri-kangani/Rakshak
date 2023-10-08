@@ -8,7 +8,7 @@ This application to is advancement to already established applications such as D
  • Child Abductions or any other similar situations.  
 -In just only one click user will seeks help in Rakshak platform.  
 - Within No time the users (help seeker) phone number,Email address,Current Location will be sent to users emergency contacts.  
-- No only that these data will be also sent to nearby police stations for help. 
+- Not only that these data will be also sent to nearby police stations for help. 
 - If user wanted Doctors help in just another click these details will be sent to nearby hospitals as immediate causlty case.  
 -When ever user presses for help in landing page it will be redirected to help desk where user can also check his current location, along with doctor support button, nearby hospitals,hotels & police station information.  
 Upcoming Extension:  
